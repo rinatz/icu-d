@@ -1,0 +1,26 @@
+{
+    "name": "icu",
+    "description": "ICU for D.",
+    "copyright": "Copyright c 2015 Kenichiro IDA",
+    "authors": ["Kenichiro IDA"],
+
+    "dependencies": {
+    },
+
+    "sourceFiles-windows-x86": ["lib/windows/x86/icuuc.lib", "lib/windows/x86/icudt.lib"],
+    "copyFiles-windows-x86": ["lib/windows/x86/icuuc53.dll", "lib/windows/x86/icudt53.dll"],
+	"libs-linux-x86": ["icu", "icudata"],
+
+	"configurations": [
+		{
+			"name": "icu",
+			"targetType": "sourceLibrary",
+			"targetPath": "bin"
+		},
+		{
+			"name": "icuTest",
+			"targetType": "executable",
+			"targetPath": "bin"
+		}
+	]
+}
